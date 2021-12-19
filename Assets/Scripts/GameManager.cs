@@ -5,10 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    public GameObject completeLevelUI;
     public float restartDelay = 1f;
     
     bool gameHasEnded = false;
+
+    public void CompleteLevel()
+    {
+        completeLevelUI.SetActive(false);
+    }
+
     public void EndGame()
     {
         if (gameHasEnded == false)
